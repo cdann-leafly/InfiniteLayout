@@ -5,7 +5,9 @@
 //  Created by Arnaud Dorgans on 03/01/2018.
 //
 
-#if canImport(RxSwift)
+#if canImport(InfiniteLayout)
+import InfiniteLayout
+#endif
 
 import UIKit
 import RxSwift
@@ -15,7 +17,7 @@ open class RxInfiniteCollectionView: InfiniteCollectionView {
     
     let disposeBag = DisposeBag()
 
-    override var forwardDelegate: Bool {
+    override open var forwardDelegate: Bool {
         return false
     }
     
@@ -40,5 +42,3 @@ open class RxInfiniteCollectionView: InfiniteCollectionView {
             .disposed(by: disposeBag)
     }
 }
-
-#endif

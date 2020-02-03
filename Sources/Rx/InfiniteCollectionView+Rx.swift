@@ -5,7 +5,9 @@
 //  Created by Arnaud Dorgans on 03/01/2018.
 //
 
-#if canImport(RxDataSources)
+#if canImport(InfiniteLayout)
+import InfiniteLayout
+#endif
 
 import UIKit
 import RxSwift
@@ -94,4 +96,3 @@ extension Reactive where Base: RxInfiniteCollectionView {
             }
     }
 }
-#endif
